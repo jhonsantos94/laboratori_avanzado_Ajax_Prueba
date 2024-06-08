@@ -1,0 +1,165 @@
+body {
+    background-image: url('https://assets.pokemon.com//assets/cms2-es-es/img/misc/virtual-backgrounds/sword-shield/pokemon-in-the-wild.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+    width: 80%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+    flex: 0 0 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.search-container input,
+.search-container select,
+.search-container button,
+#minStat,
+#maxStat {
+    margin-bottom: 10px;
+    padding: 8px; /* Reducimos el padding para hacer las cajas más pequeñas */
+    font-size: 0.9rem; /* Reducimos el tamaño de la fuente */
+}
+
+.search-container button,
+#applyFilter {
+    padding: 8px 16px; /* Mantenemos el padding horizontal y aumentamos el vertical */
+}
+
+
+.result-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribuir uniformemente los elementos en la fila */
+    gap: 20px; /* Espacio entre los bloques de información de los Pokémon */
+    margin-top: 20px;
+
+div .banner {
+    width: 300px; /* Adjust the width for smaller screens */
+    height: 150px; /* Adjust the height for smaller screens */
+}
+
+div .banner:hover {
+    transform: scale(1.2); /* Adjust the scale for smaller screens */
+}
+
+}
+
+.pokemon-info {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    min-width: 250px; /* Establecemos un ancho mínimo */
+    width: calc((100% - 60px) / 4); /* Calculamos el ancho para 4 elementos por fila */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin-bottom: 20px; /* Agregamos un margen inferior para espaciar los bloques */
+}
+
+
+div .banner {
+	width: 400px;
+	height: 200px;
+}
+div .banner:hover {
+	width: 400px;
+	height: 200px;
+	transform: scale(1.3);
+}
+
+
+
+.pokemon-info:hover {
+    transform: scale(1.05);
+}
+
+.pokemon-info h2 {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.pokemon-info img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.pokemon-info p {
+    margin: 5px 0;
+}
+
+.pokemon-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pokemon-info li {
+    text-transform: capitalize;
+}
+
+.spinner {
+    display: none;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #d81111;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error {
+    color: red;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+

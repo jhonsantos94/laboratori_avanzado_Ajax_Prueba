@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="banner">
+        <img class="banner" src="img/pokemon.png">
+</div>
+
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Buscar pokemon">
+            <button id="search-button">Buscar por Nombre</button>
+            <br>
+            <input type="text" id="pokemonId" placeholder="Introduce el ID del Pokémon">
+            <button id="buscarPorId">Buscar por ID</button>
+            <br>
+
+            <select id="pokemonType">
+                <option value="" disabled selected>Selecciona el tipo del Pokémon</option>
+            </select>
+            <button id="buscarPorTipo">Buscar por Tipo</button>
+            <br>
+            <select id="pokemonAbility">
+                <option value="" disabled selected>Selecciona la habilidad del Pokémon</option>
+            </select>
+            <button id="buscarPorHabilidad">Buscar por Habilidad</button>
+        
+            <div>
+                <h3>Filtrar por estadísticas</h3>
+                <label for="minStat">Mínima:</label>
+                <input type="number" id="minStat" placeholder="0">
+                
+                <label for="maxStat">Máxima:</label>
+                <input type="number" id="maxStat" placeholder="255">
+                
+                <select id="statType">
+                    <option value="hp">HP</option>
+                    <option value="attack">Ataque</option>
+                    <option value="defense">Defensa</option>
+                    <option value="special-attack">Ataque Especial</option>
+                    <option value="special-defense">Defensa Especial</option>
+                    <option value="speed">Velocidad</option>
+                </select>
+                
+                <button id="applyFilter">Aplicar Filtro</button>
+            </div>
+            <button id="buscarAleatorio">Buscar Pokémon Aleatorio</button>
+            <button id="limpiar">Limpiar</button>
+        </div>
+        <br>
+        <br>
+
+
+
+    </div>
+    <div class="result-container" id="pokemon"></div>
+    <div class="spinner" id="spinner"></div>
+    <div id="error" class="error"></div>
+
+    <div class="pagination">
+        <button id="prevPage" disabled>Anterior</button>
+        <button id="nextPage" disabled>Siguiente</button>
+    </div>
+    <script src="app.js"></script>
+
+</body>
+</html>
